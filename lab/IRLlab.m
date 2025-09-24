@@ -8,3 +8,39 @@ v = Q/A;
 s = 50e-3;
 t = s/v
 D = (L1^2)/(2*t)
+
+%% vatten
+clc,clear,close all
+V = 10e-6*1e-3; %m3
+p = 1000;
+m = p*V;
+g = 9.82;
+a=0.32e-3;
+gamma = (m*g)/(2*pi*a)
+
+%% vatten-oil
+clc,clear,close all
+a=0.32e-3;
+g=9.82;
+pvatten=1000;
+t = 2*60+26;
+Q = 20e-6/60; %L/s
+Q=Q*1e-3; %m3/s
+V=Q*t;
+poil=910;
+Fb=V*g*poil;
+m=V*(pvatten-poil);
+gamma=((m*g)/(2*pi*a))-Fb
+
+%% surfactant
+clc,clear,close all
+t = 15;
+Q = 20e-6/60; %L/s
+Q=Q*1e-3; %m3/s
+V=Q*t;
+p = 1000;
+m = p*V;
+g = 9.82;
+a=0.32e-3;
+gamma = (m*g)/(2*pi*a)
+
