@@ -44,3 +44,20 @@ g = 9.82;
 a=0.32e-3;
 gamma = (m*g)/(2*pi*a)
 
+%%
+clc,clear,close all
+D = 3.33e-4;
+p=997;
+Re=2300;
+visc=10e-3;
+v = (Re*visc)/(p*D)
+
+%%
+clc,clear,close all
+r5=6e-3;
+r1=2.4e-3;
+v=10e-6;
+Q5=(r5^2)*pi*v
+Q1=(r1^2)*pi*v
+Q=Q5+Q1
+Q5/Q
